@@ -42,6 +42,6 @@ public class Neo4jConfig extends AbstractNeo4jConfig {
 	@Bean
 	@Override
 	public Driver driver() {
-		return GraphDatabase.driver("bolt://localhost:7687", AuthTokens.basic("neo4j", "admin2024@"));
+		return GraphDatabase.driver("bolt://localhost:7687", AuthTokens.basic("neo4j", "password"));
 	}
 }
