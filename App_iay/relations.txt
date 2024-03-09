@@ -1,0 +1,59 @@
+
+Étudiant et Filière :
+
+Un étudiant appartient à une filière.
+(:Etudiant)-[:APPARTIENT_A]->(:Filiere)
+
+Professeur et Module :
+
+Un professeur enseigne un module.
+(:Professeur)-[:ENSEIGNE]->(:Module)
+
+Séance et Module :
+
+Une séance est associée à un module.
+(:Seance)-[:ASSOCIEE_A]->(:Module)
+
+Séance et Professeur :
+
+Une séance est dirigée par un professeur.
+(:Seance)-[:DIRIGEE_PAR]->(:Professeur)
+
+Étudiant et Séance :
+
+Un étudiant participe à une séance.
+(:Etudiant)-[:PARTICIPE_A]->(:Seance)
+
+Séance et Absence :
+
+Une séance est associée à une absence.
+(:Seance)-[:ASSOCIEE_A]->(:Absence)
+
+Filière et Département :
+
+Une filière appartient à un département.
+(:Filiere)-[:APPARTIENT_A]->(:Departement)
+
+Étudiant et Absence :
+
+Un étudiant a des absences.
+(:Etudiant)-[:A]->(:Absence)
+Filière et Étudiant :
+
+Une filière contient plusieurs étudiants.
+(:Filiere)-[:CONTIENT]->(:Etudiant)
+
+Département et Filière :
+
+Un département a plusieurs filières.
+(:Departement)-[:CONTIENT]->(:Filiere)
+
+Module et Absence :
+
+Un module est associé à des absences.
+(:Module)-[:ASSOCIE_A]->(:Absence)
+
+Responsable de filière et Filière :
+
+Un responsable de filière est associé à une filière.
+(:ResponsableFiliere)-[:EST_RESPONSABLE_DE]->(:Filiere)
